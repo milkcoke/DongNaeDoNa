@@ -1,5 +1,6 @@
-package com.example.dongnaedona
+package com.example.dongnaedona.login
 
+import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.graphics.BitmapFactory
 import android.os.Bundle
@@ -7,8 +8,9 @@ import android.os.Handler
 import android.text.Editable
 import android.text.TextWatcher
 import androidx.appcompat.app.AppCompatActivity
+import com.example.dongnaedona.R
 import kotlinx.android.synthetic.main.activity_login.*
-class MainActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -21,7 +23,11 @@ class MainActivity : AppCompatActivity() {
             login_button.startAnimation()
             val mHandler = Handler()
             mHandler.postDelayed(Runnable {
-                login_button.doneLoadingAnimation(resources.getColor(R.color.white), BitmapFactory.decodeResource(resources, R.drawable.checked))
+                login_button.doneLoadingAnimation(resources.getColor(R.color.white), BitmapFactory.decodeResource(resources,
+                    R.drawable.checked
+                ))
+                val intent = Intent(this, MainViewPagerActivity::class.java)
+                startActivity(intent)
             }, 3000)
         }
     }

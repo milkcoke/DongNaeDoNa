@@ -8,4 +8,6 @@
     <string name="signup_hint">계정이 없으신가요?</string>
     <string name="login_string">로그인</string>
     <string name="lost_password_guide_message">Forgot Password?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
