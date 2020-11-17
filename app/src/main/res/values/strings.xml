@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">동네도네</string>
+
+    <string name="register">회원가입</string>
+    <string name="login_apartment_number">동/호수</string>
+    <string name="login_password_hint">비밀번호</string>
+    <string name="signin_hint">Already have an account? Sign In</string>
+    <string name="signup_hint">계정이 없으신가요?</string>
+    <string name="login_string">로그인</string>
+    <string name="lost_password_guide_message">Forgot Password?</string>
+</resources>
