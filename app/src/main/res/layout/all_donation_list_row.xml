@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp">
+
+    <ImageView
+        android:id="@+id/goods_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:src="@drawable/canned_tuna"
+        android:layout_marginHorizontal="3dp"/>
+
+    <LinearLayout
+        android:id="@+id/information_linearLayout"
+        app:layout_constraintStart_toEndOf="@id/goods_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="start"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/goods_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="참치 통조림"/>
+    <TextView
+        android:id="@+id/building_and_unit_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1003동 1706호"/>
+    <TextView
+        android:id="@+id/way_of_donation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="방문해주세요"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/request_donation_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:backgroundTint="#00a5ff"
+        android:text="기부 요청"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

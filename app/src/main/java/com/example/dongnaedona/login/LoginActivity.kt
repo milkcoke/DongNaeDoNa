@@ -26,8 +26,11 @@ class LoginActivity : AppCompatActivity() {
                 login_button.doneLoadingAnimation(resources.getColor(R.color.white), BitmapFactory.decodeResource(resources,
                     R.drawable.checked
                 ))
-                val intent = Intent(this, MainViewPagerActivity::class.java)
-                startActivity(intent)
+                mHandler.postDelayed({
+                    val intent = Intent(this, MainViewPagerActivity::class.java)
+                    startActivity(intent)
+                },500)
+
             }, 3000)
         }
     }
