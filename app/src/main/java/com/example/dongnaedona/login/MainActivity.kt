@@ -1,6 +1,7 @@
 package com.example.dongnaedona.login
 
 import android.content.Context
+import android.content.res.TypedArray
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -12,12 +13,14 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainViewPagerActivity : AppCompatActivity(),
     DeleteCheckDialogFragment.DeleteCheckListener {
-    private val tabNameArray = arrayOf("기부 리스트", "내 기부")
+//    private val iconArray = resources.obtainTypedArray(R.array.icon_array)
+    private lateinit var iconArray : TypedArray
     private lateinit var mContext: Context
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         mContext = this
+        iconArray = mContext.resources.obtainTypedArray(R.array.icon_array)
         init()
     }
 
@@ -25,11 +28,8 @@ class MainViewPagerActivity : AppCompatActivity(),
         view_pager.adapter =
             ScreenSlidePagerAdapter(this)
         TabLayoutMediator(kind_of_list_tab_layout, view_pager) { tab, position ->
-            tab.text = tabNameArray[position]
+            tab.setIcon(iconArray.getResourceId(position, -1))
         }.attach()
-        //attach() :    Link the TabLayout and the ViewPager2 together.
-        // Must be called after ViewPager2 has an adapter set
-
     }
 
     override fun onDialogPositiveClick(dialog: DialogFragment, donationItemName: String) {

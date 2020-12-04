@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="icon_array">
+        <item>@drawable/chatting_icon</item>
+        <item>@drawable/donation_icon</item>
+        <item>@drawable/my_icon</item>
+    </array>
+</resources>
