@@ -39,18 +39,76 @@
                                 android:layout_gravity="center"
                                 android:padding="@dimen/loginViewsMargin">
 
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/dong_text"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="1003동"
+                                    android:textSize="20sp"/>
 
-                                <com.google.android.material.textfield.TextInputLayout
-                                    android:id="@+id/apartmentNumber_input_layout"
-                                    style="@style/parent"
-                                    android:layout_marginTop="@dimen/loginViewsMargin">
-                                    <com.google.android.material.textfield.TextInputEditText
-                                        android:id="@+id/edit_text_apartmentNumber"
-                                        style="@style/modifiedEditText"
-                                        android:inputType="textEmailAddress"
-                                        android:maxLines="1"
-                                        android:hint="@string/login_apartment_number"/>
-                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.skydoves.powerspinner.PowerSpinnerView
+                                    android:id="@+id/basement_level_spinner"
+                                    android:layout_width="80dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintStart_toEndOf="@id/dong_text"
+                                    android:gravity="center"
+                                    android:textSize="20sp"
+                                    android:hint="층"
+                                    app:spinner_item_array="@array/basement_level_array"
+                                    app:spinner_divider_color="@color/colorPrimary"
+                                    app:spinner_divider_show="true"
+                                    app:spinner_divider_size="5dp"
+                                    app:spinner_popup_width="180dp"
+                                    app:spinner_popup_background="#FF03DAC5"
+                                    app:spinner_popup_elevation="50dp"
+                                    app:spinner_popup_animation="dropdown"/>
+<!--                                    <TextView-->
+<!--                                        android:id="@+id/baseline_text"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        app:layout_constraintTop_toTopOf="parent"-->
+<!--                                        app:layout_constraintStart_toEndOf="@id/basement_level_spinner"-->
+<!--                                        android:text="층"-->
+<!--                                        android:textSize="20sp"/>-->
+
+                                <com.skydoves.powerspinner.PowerSpinnerView
+                                    android:id="@+id/ho_spinner"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintStart_toEndOf="@id/basement_level_spinner"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    android:layout_marginLeft="20dp"
+                                    android:gravity="center"
+                                    android:textSize="20sp"
+                                    android:hint="호"
+                                    app:spinner_item_array="@array/ho_array"
+                                    app:spinner_divider_color="@color/colorPrimary"
+                                    app:spinner_divider_show="true"
+                                    app:spinner_divider_size="5dp"
+                                    app:spinner_popup_width="80dp"
+                                    app:spinner_popup_background="#FF03DAC5"
+                                    app:spinner_popup_elevation="50dp"
+                                    app:spinner_popup_animation="dropdown"/>
+<!--                                <TextView-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    app:layout_constraintStart_toEndOf="@id/ho_spinner"-->
+<!--                                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                    android:text="호"-->
+<!--                                    android:textSize="20sp"/>-->
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
 
                                 <com.google.android.material.textfield.TextInputLayout
                                     android:id="@+id/password_input_layout"
@@ -80,10 +138,12 @@
                                     android:backgroundTint="@color/color_state_button"
                                     android:text="@string/login_string"
                                     android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/whiteTextColor"
                                     android:layout_gravity="center_horizontal"
                                     android:layout_marginTop="@dimen/loginViewsMargin"
                                     app:spinning_bar_width="5dp"
-                                    app:spinning_bar_color="@color/colorPrimary"
+                                    app:spinning_bar_color="@color/white"
                                     app:spinning_bar_padding="1dp"/>
 
                                 <LinearLayout

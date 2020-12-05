@@ -10,6 +10,8 @@
         android:id="@+id/kind_of_list_tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:tabIndicatorColor="@color/colorTransparentBackground"
+        app:tabIndicatorGravity="stretch"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>

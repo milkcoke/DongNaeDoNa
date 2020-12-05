@@ -7,6 +7,7 @@
     <color name="colorSecondaryVariant">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="colorTransparentBackground">#80DDDDDD</color>
     <color name="colorFalse">#88888888</color>
     <!--colors for modern ui-->
     <color name="whiteTextColor">#fff</color>

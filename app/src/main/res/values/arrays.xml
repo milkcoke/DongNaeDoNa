@@ -5,4 +5,38 @@
         <item>@drawable/donation_icon</item>
         <item>@drawable/my_icon</item>
     </array>
+
+    <string-array name="basement_level_array">
+        <item>1층</item>
+        <item>2층</item>
+        <item>3층</item>
+        <item>4층</item>
+        <item>5층</item>
+        <item>6층</item>
+        <item>7층</item>
+        <item>8층</item>
+        <item>9층</item>
+        <item>10층</item>
+        <item>11층</item>
+        <item>12층</item>
+        <item>13층</item>
+        <item>14층</item>
+        <item>15층</item>
+        <item>16층</item>
+        <item>17층</item>
+        <item>18층</item>
+        <item>19층</item>
+    </string-array>
+
+    <string-array name="ho_array">
+        <item>1호</item>
+        <item>2호</item>
+        <item>3호</item>
+        <item>4호</item>
+        <item>5호</item>
+        <item>6호</item>
+        <item>7호</item>
+        <item>8호</item>
+        <item>9호</item>
+    </string-array>
 </resources>

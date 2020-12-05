@@ -7,14 +7,18 @@ import android.os.Bundle
 import android.os.Handler
 import android.text.Editable
 import android.text.TextWatcher
+import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.dongnaedona.R
 import kotlinx.android.synthetic.main.activity_login.*
 class LoginActivity : AppCompatActivity() {
+//    private val mContext = this@LoginActivity
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         addTextChangeListener()
+        initializeSpinner()
         addLoginButtonClickListener()
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
     }
@@ -34,23 +38,23 @@ class LoginActivity : AppCompatActivity() {
             }, 3000)
         }
     }
+    private fun initializeSpinner(){
+        val basementLevelAdapter = ArrayAdapter.createFromResource(this, R.array.basement_level_array, android.R.layout.two_line_list_item)
+                .also { adapter ->
+                    adapter.setDropDownViewResource(android.R.layout.two_line_list_item)
+//                    basement_level_spinner.setSpinnerAdapter(adapter)
+                }
+//        basement_level_spinner.setSpinnerAdapter(basementLevelAdapter)
+        basement_level_spinner.getSpinnerRecyclerView().layoutManager = GridLayoutManager(this@LoginActivity, 3)
+
+
+    }
     private fun addTextChangeListener() {
-        edit_text_apartmentNumber.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(s: Editable?) {
-                apartmentNumber_input_layout.hint = null
-            }
-
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-            }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-            }
-        })
 
         edit_text_password.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 password_input_layout.hint = null
-                if (s.toString().length >= 3) login_button.isEnabled = true
+                if (s.toString().length >= 6) login_button.isEnabled = true
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {

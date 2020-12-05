@@ -1,9 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".chatting.ChattingList">
+
+    <androidx.appcompat.widget.Toolbar
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/colorPrimary"
+    app:title="채팅"
+    app:titleTextColor="@color/white"
+    android:elevation="3dp">
+
+<!--        <com.google.android.material.appbar.AppBarLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            &lt;!&ndash;app:navigationIcon="@drawable/ic_menu_24dp"&ndash;&gt;-->
+<!--            <com.google.android.material.appbar.MaterialToolbar-->
+<!--                android:id="@+id/topAppBar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="?attr/actionBarSize"-->
+<!--                android:title="Chatting"-->
+<!--                android:backgroundTint="?attr/colorPrimary"-->
+<!--                app:menu="@menu/top_app_bar"-->
+<!--                style="@style/Widget.MaterialComponents.Toolbar"-->
+<!--                />-->
+
+<!--        </com.google.android.material.appbar.AppBarLayout>-->
+
+
+    </androidx.appcompat.widget.Toolbar>
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -11,6 +40,5 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:text="@string/hello_blank_fragment" />
-
 
 </FrameLayout>
