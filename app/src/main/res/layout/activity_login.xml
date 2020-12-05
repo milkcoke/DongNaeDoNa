@@ -70,13 +70,14 @@
                                     android:textColor="@color/primaryTextColor"
                                     android:textSize="@dimen/newsMoreTextSize"
                                     android:layout_gravity="end"
-                                    android:onClick="viewForgotPAssword"
+                                    android:onClick="viewForgotPassword"
                                     android:layout_marginTop="10dp"/>
 
                                 <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
                                     android:id="@+id/login_button"
-                                    android:enabled="false"
                                     style="@style/loginButton"
+                                    android:enabled="false"
+                                    android:backgroundTint="@color/color_state_button"
                                     android:text="@string/login_string"
                                     android:textSize="20sp"
                                     android:layout_gravity="center_horizontal"
