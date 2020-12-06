@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+    <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
     <style name="powerSpinner">
         <item name="android:layout_marginLeft">20dp</item>
         <item name="android:gravity">center</item>
@@ -48,11 +55,6 @@
 
     <style name="headerTextPrimary" parent="headerText">
         <item name="android:textColor">@color/primaryTextColor</item>
-    </style>
-
-    <style name="modifiedEditText" parent="parent">
-        <item name="android:textSize">@dimen/newsMoreTextSize</item>
-        <item name="android:backgroundTint">@color/primaryTextColor</item>
     </style>
 
     <style name="viewParent">

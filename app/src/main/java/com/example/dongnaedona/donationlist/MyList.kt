@@ -1,5 +1,6 @@
 package com.example.dongnaedona.donationlist
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +8,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dongnaedona.R
+import com.example.dongnaedona.donation.RegisterGoods
 import com.example.dongnaedona.model.DonationInfo
+import kotlinx.android.synthetic.main.fragment_my_list.*
 
 class MyList : androidx.fragment.app.Fragment() {
     private lateinit var donationListRecyclerView: RecyclerView
@@ -38,6 +41,10 @@ class MyList : androidx.fragment.app.Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
 
+        register_donation_button.setOnClickListener {
+            val addPhotoIntent = Intent(context, RegisterGoods::class.java)
+            startActivity(addPhotoIntent)
+        }
         super.onActivityCreated(savedInstanceState)
     }
 

@@ -23,11 +23,49 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:scaleType="fitXY"
-        android:backgroundTint="@color/colorTransparentWhite"
+        android:backgroundTint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
         android:layout_marginTop="20dp"
         android:layout_marginHorizontal="20dp"
-        android:src="@drawable/add_photo_icon"/>
+        android:src="@drawable/ic_add_photo"/>
+
+    <TextView
+        android:id="@+id/goods_name_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/add_photo_button"
+        app:layout_constraintTop_toBottomOf="@id/add_photo_button"
+        android:text="물품명"
+        android:textSize="20sp"/>
+
+<!--    <cz.ackee.ui.textfield.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/goods_name_textView"-->
+<!--        app:layout_constraintStart_toStartOf="@id/goods_name_textView"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:hint="Username"-->
+<!--        app:boxBackgroundColor="@color/colorTransparentBackground"-->
+<!--        app:boxBackgroundMode="outline"-->
+<!--        app:boxCornerRadiusBottomEnd="8dp"-->
+<!--        app:boxCornerRadiusBottomStart="8dp"-->
+<!--        app:boxCornerRadiusTopEnd="8dp"-->
+<!--        app:boxCornerRadiusTopStart="8dp"-->
+<!--        app:boxStrokeColor="@color/colorPrimary"-->
+<!--        app:boxStrokeWidth="0dp"-->
+<!--        app:boxStrokeWidthFocused="1dp"-->
+<!--        app:hintEnabled="true"-->
+<!--        app:hintPaddingTop="12dp"-->
+<!--        app:hintTextAppearance="@style/TextAppearance.Design.Hint">-->
+
+<!--        <cz.ackee.ui.textfield.TextInputEditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:paddingStart="16dp"-->
+<!--            android:paddingTop="28dp"-->
+<!--            android:paddingBottom="16dp"-->
+<!--            android:singleLine="true" />-->
+<!--    </cz.ackee.ui.textfield.TextInputLayout>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.os.Handler
 import android.text.Editable
 import android.text.TextWatcher
-import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.dongnaedona.R
@@ -28,9 +27,7 @@ class LoginActivity : AppCompatActivity() {
             login_button.startAnimation()
             val mHandler = Handler()
             mHandler.postDelayed(Runnable {
-                login_button.doneLoadingAnimation(resources.getColor(R.color.white), BitmapFactory.decodeResource(resources,
-                    R.drawable.checked
-                ))
+                login_button.doneLoadingAnimation(getColor(R.color.white), BitmapFactory.decodeResource(resources,R.drawable.checked))
                 mHandler.postDelayed({
                     val intent = Intent(this, MainViewPagerActivity::class.java)
                     startActivity(intent)
@@ -54,10 +51,8 @@ class LoginActivity : AppCompatActivity() {
         }
     }
     private fun addTextChangeListener() {
-
         edit_text_password.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
-                password_input_layout.hint = null
                 if (s.toString().length >= 6) login_button.isEnabled = true
             }
 
