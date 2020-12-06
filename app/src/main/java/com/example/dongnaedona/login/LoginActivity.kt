@@ -53,7 +53,14 @@ class LoginActivity : AppCompatActivity() {
     private fun addTextChangeListener() {
         edit_text_password.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
-                if (s.toString().length >= 6) login_button.isEnabled = true
+                if (s.toString().length >= 4) {
+                    login_button.isEnabled = true
+                    password_input_layout.isEndIconVisible= true
+                } else {
+                    login_button.isEnabled = false
+                    password_input_layout.isEndIconVisible= false
+                    edit_text_password.error = "4글자 이상 입력해주세요"
+                }
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {

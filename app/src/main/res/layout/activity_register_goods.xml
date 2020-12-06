@@ -39,33 +39,77 @@
         android:text="물품명"
         android:textSize="20sp"/>
 
-<!--    <cz.ackee.ui.textfield.TextInputLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/goods_name_textView"-->
-<!--        app:layout_constraintStart_toStartOf="@id/goods_name_textView"-->
-<!--        android:layout_margin="10dp"-->
-<!--        android:hint="Username"-->
-<!--        app:boxBackgroundColor="@color/colorTransparentBackground"-->
-<!--        app:boxBackgroundMode="outline"-->
-<!--        app:boxCornerRadiusBottomEnd="8dp"-->
-<!--        app:boxCornerRadiusBottomStart="8dp"-->
-<!--        app:boxCornerRadiusTopEnd="8dp"-->
-<!--        app:boxCornerRadiusTopStart="8dp"-->
-<!--        app:boxStrokeColor="@color/colorPrimary"-->
-<!--        app:boxStrokeWidth="0dp"-->
-<!--        app:boxStrokeWidthFocused="1dp"-->
-<!--        app:hintEnabled="true"-->
-<!--        app:hintPaddingTop="12dp"-->
-<!--        app:hintTextAppearance="@style/TextAppearance.Design.Hint">-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/goods_name_inputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/loginViewsMargin"
+        app:layout_constraintStart_toStartOf="@id/add_photo_button"
+        app:layout_constraintTop_toBottomOf="@id/goods_name_textView"
+        android:layout_marginHorizontal="20dp"
+        app:startIconDrawable="@drawable/ic_name_tag"
+        app:startIconContentDescription="이건 물건 이름이야"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true">
 
-<!--        <cz.ackee.ui.textfield.TextInputEditText-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:paddingStart="16dp"-->
-<!--            android:paddingTop="28dp"-->
-<!--            android:paddingBottom="16dp"-->
-<!--            android:singleLine="true" />-->
-<!--    </cz.ackee.ui.textfield.TextInputLayout>-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/goods_name_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:hint="물품명"
+            android:maxLines="1"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/goods_description_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/loginViewsMargin"
+        app:layout_constraintStart_toStartOf="@id/add_photo_button"
+        app:layout_constraintTop_toBottomOf="@id/goods_name_inputLayout"
+        android:layout_marginHorizontal="20dp"
+        app:startIconDrawable="@drawable/ic_donation_description_24"
+        app:startIconContentDescription="이건 물건 이름이야"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/goods_description_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:hint="상품 설명"
+            android:maxLines="10"
+            android:inputType="textMultiLine"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/donation_method_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/loginViewsMargin"
+        app:layout_constraintStart_toStartOf="@id/add_photo_button"
+        app:layout_constraintTop_toBottomOf="@id/goods_description_layout"
+        android:layout_marginHorizontal="20dp"
+        app:startIconDrawable="@drawable/donation_icon"
+        app:errorEnabled="false">
+
+        <AutoCompleteTextView
+            android:id="@+id/donation_method_autoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:hint="거래 방식" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -81,11 +81,14 @@
 
                                     <!--style="@style/parent"-->
                                 <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/password_input_layout"
                                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/password_input_layout"
-                                    android:layout_marginTop="@dimen/loginViewsMargin">
+                                    android:layout_marginTop="@dimen/loginViewsMargin"
+                                    app:startIconDrawable="@drawable/ic_password_icon"
+                                    app:endIconMode="password_toggle"
+                                    app:errorEnabled="true">
                                     <!--style="@style/modifiedEditText"-->
                                     <com.google.android.material.textfield.TextInputEditText
                                         android:id="@+id/edit_text_password"

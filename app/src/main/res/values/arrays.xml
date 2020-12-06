@@ -39,4 +39,10 @@
         <item>8호</item>
         <item>9호</item>
     </string-array>
+
+    <string-array name="donation_method">
+        <item>저희 집에 방문해주세요</item>
+        <item>경비실에서 가져가세요</item>
+        <item>채팅으로 문의해주세요</item>
+    </string-array>
 </resources>
