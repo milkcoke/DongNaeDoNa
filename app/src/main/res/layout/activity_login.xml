@@ -57,56 +57,25 @@
                                     android:id="@+id/basement_level_spinner"
                                     android:layout_width="80dp"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginLeft="20dp"
+                                    style="@style/powerSpinner"
                                     app:layout_constraintTop_toTopOf="parent"
                                     app:layout_constraintStart_toEndOf="@id/dong_text"
-                                    android:gravity="center"
-                                    android:textSize="20sp"
                                     android:hint="층"
                                     app:spinner_item_array="@array/basement_level_array"
-                                    app:spinner_divider_color="@color/colorPrimary"
-                                    app:spinner_divider_show="true"
-                                    app:spinner_divider_size="5dp"
-                                    app:spinner_popup_width="180dp"
-                                    app:spinner_popup_background="#FF03DAC5"
-                                    app:spinner_popup_elevation="50dp"
-                                    app:spinner_popup_animation="dropdown"/>
-<!--                                    <TextView-->
-<!--                                        android:id="@+id/baseline_text"-->
-<!--                                        android:layout_width="wrap_content"-->
-<!--                                        android:layout_height="wrap_content"-->
-<!--                                        app:layout_constraintTop_toTopOf="parent"-->
-<!--                                        app:layout_constraintStart_toEndOf="@id/basement_level_spinner"-->
-<!--                                        android:text="층"-->
-<!--                                        android:textSize="20sp"/>-->
+                                    app:spinner_popup_width="180dp" />
 
                                 <com.skydoves.powerspinner.PowerSpinnerView
                                     android:id="@+id/ho_spinner"
                                     android:layout_width="100dp"
                                     android:layout_height="wrap_content"
+                                    style="@style/powerSpinner"
                                     app:layout_constraintTop_toTopOf="parent"
                                     app:layout_constraintStart_toEndOf="@id/basement_level_spinner"
                                     app:layout_constraintEnd_toEndOf="parent"
-                                    android:layout_marginLeft="20dp"
-                                    android:gravity="center"
-                                    android:textSize="20sp"
                                     android:hint="호"
                                     app:spinner_item_array="@array/ho_array"
-                                    app:spinner_divider_color="@color/colorPrimary"
-                                    app:spinner_divider_show="true"
-                                    app:spinner_divider_size="5dp"
-                                    app:spinner_popup_width="80dp"
-                                    app:spinner_popup_background="#FF03DAC5"
-                                    app:spinner_popup_elevation="50dp"
-                                    app:spinner_popup_animation="dropdown"/>
-<!--                                <TextView-->
-<!--                                    android:layout_width="wrap_content"-->
-<!--                                    android:layout_height="wrap_content"-->
-<!--                                    app:layout_constraintStart_toEndOf="@id/ho_spinner"-->
-<!--                                    app:layout_constraintTop_toTopOf="parent"-->
-<!--                                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                                    android:text="호"-->
-<!--                                    android:textSize="20sp"/>-->
+                                    app:spinner_popup_width="80dp" />
+
 
                                 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#FF7133</color>
+
     <color name="purple_500">#FF6200EE</color>
     <color name="colorPrimaryVariant">#FF3700B3</color>
     <color name="colorSecondary">#FF03DAC5</color>
     <color name="colorSecondaryVariant">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="colorTransparentWhite">#80FFFFFF</color>
     <color name="colorTransparentBackground">#80DDDDDD</color>
     <color name="colorFalse">#88888888</color>
     <!--colors for modern ui-->
     <color name="whiteTextColor">#fff</color>
     <color name="primaryTextColor">#00a5ff</color>
+    <color name="primaryTextColorTransparent">#80a5ff</color>
     <color name="loginBkColor">#f0f0f0</color>
     <!--colors for card-->
     <color name="whiteCardColor">#fff</color>

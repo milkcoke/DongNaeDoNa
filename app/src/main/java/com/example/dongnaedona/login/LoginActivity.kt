@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.dongnaedona.R
 import kotlinx.android.synthetic.main.activity_login.*
+
 class LoginActivity : AppCompatActivity() {
 //    private val mContext = this@LoginActivity
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,19 +36,22 @@ class LoginActivity : AppCompatActivity() {
                     startActivity(intent)
                 },500)
 
-            }, 3000)
+            }, 2000)
         }
     }
     private fun initializeSpinner(){
-        val basementLevelAdapter = ArrayAdapter.createFromResource(this, R.array.basement_level_array, android.R.layout.two_line_list_item)
-                .also { adapter ->
-                    adapter.setDropDownViewResource(android.R.layout.two_line_list_item)
-//                    basement_level_spinner.setSpinnerAdapter(adapter)
-                }
-//        basement_level_spinner.setSpinnerAdapter(basementLevelAdapter)
-        basement_level_spinner.getSpinnerRecyclerView().layoutManager = GridLayoutManager(this@LoginActivity, 3)
-
-
+        basement_level_spinner.apply{
+            getSpinnerRecyclerView().layoutManager = GridLayoutManager(this@LoginActivity, 3)
+            //        기본 값으로 1층을 줌.
+            selectItemByIndex(0)
+        }
+//        바깥 클릭되면 자동으로 닫힘
+        basement_level_spinner.setOnSpinnerOutsideTouchListener{_, _->
+            basement_level_spinner.dismiss()
+        }
+        ho_spinner.setOnSpinnerOutsideTouchListener { _, _ ->
+            ho_spinner.dismiss()
+        }
     }
     private fun addTextChangeListener() {
 
