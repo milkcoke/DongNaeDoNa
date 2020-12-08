@@ -24,6 +24,7 @@ class MainViewPagerActivity : AppCompatActivity(),
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         mContext = this
         iconArray = mContext.resources.obtainTypedArray(R.array.icon_array)
         init()
@@ -61,6 +62,8 @@ class MainViewPagerActivity : AppCompatActivity(),
             tab.setIcon(iconArray.getResourceId(position, -1))
         }.attach()
 
+        val myListTabIndex = intent.getIntExtra("MY_DONATION_TAB", 0)
+        view_pager.currentItem = myListTabIndex
     }
 
     override fun onDialogPositiveClick(dialog: DialogFragment, donationItemName: String) {
