@@ -31,8 +31,8 @@ class MyList : androidx.fragment.app.Fragment() {
         donationListRecyclerView.layoutManager = LinearLayoutManager(rootView.context, LinearLayoutManager.VERTICAL, false)
 //        DonationInfo("참치 통조림", 1003, 106, "방문해주세요")
         val tempDonationDataList = ArrayList<DonationInfo>()
-        tempDonationDataList.add(0, DonationInfo(R.drawable.shoes, "거의 새신발", 1004, 1702, "경비실에 두고가요"))
-        tempDonationDataList.add(1, DonationInfo(R.drawable.scarf, "노란 스카프", 1004, 1601, "채팅 문의해주세요"))
+        tempDonationDataList.add(0, DonationInfo(R.drawable.shoes, "거의 새신발", 1003, 1702, "경비실에 두고가요"))
+        tempDonationDataList.add(1, DonationInfo(R.drawable.scarf, "노란 스카프", 1003, 1601, "채팅 문의해주세요"))
         myDonationListAdapter = MyDonationListAdapter(tempDonationDataList)
 
         donationListRecyclerView.adapter = myDonationListAdapter
